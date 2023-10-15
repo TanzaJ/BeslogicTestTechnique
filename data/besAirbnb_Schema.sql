@@ -4,11 +4,11 @@ CREATE SCHEMA besAirbnb_db;
 USE besAirbnb_db;
 
 --
--- Table structure for table `amenity_type`
+-- Table structure for table `amenity`
 --
 
-CREATE TABLE `amenity_type` (
-  `amenity_type_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE `amenity` (
+  `amenity_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -75,17 +75,6 @@ CREATE TABLE `reservation` (
   `user_id` int,  
   FOREIGN KEY (`house_id`) REFERENCES `house`(`house_id`),
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Table structure for table `amenity`
---
-
-CREATE TABLE `amenity` (
-  `amenity_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `name` varchar(50) NOT NULL,
-  `amenity_type_id` int,  
-  FOREIGN KEY (`amenity_type_id`) REFERENCES `amenity_type`(`amenity_type_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

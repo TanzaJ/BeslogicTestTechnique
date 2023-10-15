@@ -1,0 +1,20 @@
+<IfModule dir_module>
+    DirectoryIndex index.php?resource=frontpage&action=view
+</IfModule>
+
+ErrorDocument 404 /app/error404.php
+
+RewriteEngine on
+RewriteRule ^about$ about.html [NC]
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^/?([a-z]+)/([a-z]+)/$ index.php?resource=$1&action=$2 [QSA,L,E=POSTDATA:%{QUERY_STRING}]
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteRule ^/?([a-z]+)/([a-z]+)/$ index.php?resource=$1&action=$2 [QSA,L]
+RewriteCond %{REQUEST_METHOD} =POST
+RewriteRule ^/?([a-z]+)/([a-z]+)$ index.php?resource=$1&action=$2 [QSA,L,E=POSTDATA:%{QUERY_STRING}]
+RewriteCond %{REQUEST_METHOD} !=POST
+RewriteRule ^/?([a-z]+)/([a-z]+)$ index.php?resource=$1&action=$2 [QSA,L]
+RewriteRule ^/?([a-z]+)/([a-z]+)/([a-z]+)/$ index.php?resource=$1&action=$2&data=$3 [QSA,L]
+RewriteRule ^/?([a-z]+)/([a-z]+)/([a-z]+)$ index.php?resource=$1&action=$2&data=$3 [QSA,L]
+RewriteRule ^maincss.css$ shared/([a-z]+).([a-z]+) [NC]
+RewriteRule ^favicon.ico/? http://localhost/archipel/shared/logos/Logo_A_Archipel.ico [NC]
