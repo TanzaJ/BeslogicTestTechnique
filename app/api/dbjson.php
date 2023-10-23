@@ -1,35 +1,40 @@
 <?php
 
 namespace api;
+use Controllers\BaseController;
 
-class DbJson{
+class DbJson extends BaseController{
 
     private $house;
-    private $project;
-    private $admin;
+    private $reservation;
 
     function __construct(){
         $this->house = new \models\House();
+        $this->reservation = new \models\Reservation();
     }
 
     function getJson($dataNeeded){
-        if ($dataNeeded == 'housesfull') { 
+        if ($dataNeeded == 'housesFull') { 
             header("Content-Type: application/json");
             return json_encode($this->house->getAll());
-        } 
-        // else if ($dataNeeded == 'projectsfull') { 
-        //     header("Content-Type: application/json");
-        //     return json_encode($this->project->getAll());
-        // } else if ($dataNeeded == 'clientscompany') { 
-        //     header("Content-Type: application/json");
-        //     return json_encode($this->client->getClientCompany());
-        // }else if ($dataNeeded == 'projectsclient') {
-        //     header("Content-Type: application/json");
-        //     return json_encode($this->project->getProjectClient());
-        // }else if ($dataNeeded == 'adminsfull') {
-        //     header("Content-Type: application/json");
-        //     return json_encode($this->admin->getAll());
-        // }
+        }
+    }
+    function getJsonWithId($dataNeeded, $id){
+        if ($dataNeeded == 'house') { 
+            header("Content-Type: application/json");
+            return json_encode($this->house->getHouseById($id));
+        }
+        else if ($dataNeeded == 'houseAmenity') { 
+            header("Content-Type: application/json");
+            return json_encode($this->house->getAllHouseAmenities($id));
+        }
+        else if ($dataNeeded == 'reservation') { 
+            header("Content-Type: application/json");
+            return json_encode($this->reservation->getAll($id));
+        }
+        else {
+            return "goofyhaha";
+        }
     }
 }
 ?>

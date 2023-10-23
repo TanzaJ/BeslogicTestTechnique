@@ -29,17 +29,44 @@ class House{
     }
 
     function getAll(){
-        $query = "SELECT h.house_id, h.img_url, h.name, h.description, h.location, h.price, h.total_likes, h.guests_num, h.bedrooms_num, h.bathrooms_num, p.name, l.name FROM house h LEFT JOIN property p on h.property_id = p.property_id LEFT JOIN language l on h.language_id = l.language_id WHERE 1";
+        $query = "SELECT h.house_id, h.img_url, h.name, h.description, h.location, h.price, h.total_likes, h.guests_num, h.bedrooms_num, h.bathrooms_num, p.name as property_name, l.name as language FROM house h LEFT JOIN property p on h.property_id = p.property_id LEFT JOIN language l on h.language_id = l.language_id";
 
         $statement = $this->dbConnection->prepare($query);
 
         $statement->execute();
 
         return $statement->fetchAll();
-
     }    
 
-    
+	function getHouseById($id){
+        $query = "SELECT h.house_id, h.img_url, h.name, h.description, h.location, h.price, h.total_likes, h.guests_num, h.bedrooms_num, h.bathrooms_num, p.name as property_name, l.name as language FROM house h LEFT JOIN property p on h.property_id = p.property_id LEFT JOIN language l on h.language_id = l.language_id WHERE 1 AND h.house_id = $id";
+
+        $statement = $this->dbConnection->prepare($query);
+
+        $statement->execute();
+
+        return $statement->fetchAll();
+    }
+
+	function getAllHouseAmenities($id){
+		$query = "SELECT a.name FROM amenity as a LEFT JOIN amenitylist as al on a.amenity_id = al.amenity_id WHERE al.house_id = $id";
+
+        $statement = $this->dbConnection->prepare($query);
+
+        $statement->execute();
+
+        return $statement->fetchAll();
+	}
+
+	function reserveHouse($final_cost, $house_id, $user_id){
+		$query = "INSERT INTO reservation (check_in, final_cost, house_id, user_id) VALUES (curdate() , $final_cost,$house_id, $user_id)";
+
+        $statement = $this->dbConnection->prepare($query);
+
+        $statement->execute();
+		
+        return $statement->fetchAll();
+	}
 
     /**
      * Variable getters and setters 

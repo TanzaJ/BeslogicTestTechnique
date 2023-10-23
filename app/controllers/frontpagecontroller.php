@@ -3,7 +3,7 @@ namespace controllers;
 require(dirname(__DIR__).'/models/frontpage.php');
 require(dirname(__DIR__).'/api/dbjson.php');
 
-class FrontpageController{
+class FrontpageController extends BaseController{
     private $frontpage;
     private $dbjson;
 

@@ -1,0 +1,58 @@
+*{
+    font-family: "geometric sans serif";
+}
+
+#imgbnb {
+    background-color: rgb(255, 255, 255);
+    -webkit-filter: brightness(100%);
+    object-fit: contain;
+    width: 600px;
+    height: 450px;
+}
+
+#images{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#extraDesc{
+    width: 400;
+    display: flex;
+    flex-direction: row;
+}
+
+h2{
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+#locationDiv, #likes{
+    display: flex;
+    flex-direction: row;
+}
+
+i{
+    padding-right: 5px;
+}
+
+hr{
+    width: 550px;
+    color: gray;
+}
+
+#detailsDescList{
+    display: flex;
+    flex-direction: row;
+
+}
+.det{
+    font-size: 25;
+    padding-right: 30px;
+}
+#container{
+    padding: 20px;
+}
+
+#reserve{
+    font-family: "Verdana";
+}

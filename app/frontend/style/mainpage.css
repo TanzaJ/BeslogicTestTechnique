@@ -1,0 +1,6 @@
+#container {
+    padding: 40px;
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    flex-wrap: wrap;
+}

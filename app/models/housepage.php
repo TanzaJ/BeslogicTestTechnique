@@ -4,7 +4,7 @@ require_once(dirname(__DIR__)."/core/dbconnectionmanager.php");
 
 
 
-class FrontPage{
+class HousePage{
     private $dbConnection;
 
     function __construct(){

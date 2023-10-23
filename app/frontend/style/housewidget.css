@@ -1,4 +1,60 @@
-.imgThumbnail{
-    height: 200px;
-    width: 200px;
+*{
+    font-family: "geometric sans serif";
+}
+a { 
+    color: inherit; 
+}
+ 
+.house_img {
+    
+    border-radius: 25px;
+
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.imagecontainer {
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.widHouse {
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    -webkit-filter: brightness(100%);
+}
+
+.widHouse:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.widHouse {
+    padding: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    color: black;
+    font-size: 20px;
+}
+  
+h2 {
+    color: grey;
+    font-weight: 900;
+    font-size: 12px;
+}
+  
+h4 {
+    color: black;
+    font-weight: 1900;
+    font-size: 15px;
 }
