@@ -1,0 +1,19 @@
+*{
+    font-family: "geometric sans serif";
+}
+
+.imageClass{
+    border-radius: 15px;
+    width: 50px;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.btn-danger{
+    font-family: "Verdana";
+}
+
+#container {
+    padding: 20px;
+}

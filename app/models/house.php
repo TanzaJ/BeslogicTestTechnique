@@ -5,6 +5,8 @@ require_once(dirname(__DIR__)."/core/dbconnectionmanager.php");
 
 /**
  * Class to use and manage houses
+ * 
+ * TODO: SQL Injection Prevention
  */
 class House{
     private $house_id;

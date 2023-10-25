@@ -156,11 +156,18 @@ VALUES ('James','jk@gmail.com', 'hello123');
 --
 INSERT IGNORE INTO house (img_url, name, description, location, price, total_likes, guests_num, bedrooms_num, bathrooms_num,
 property_id, language_id)
+<<<<<<< Updated upstream
 VALUES ('https://images.unsplash.com/photo-1601918774946-25832a4be0d6?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwxfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Karsten Winegeart', 'Coffee and A-Frames', "Austin Texas", 5555, 643, 4, 3, 2, 9, 1),
 ('https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwyfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Filios Sazeides', 'white bedspread inside room', "Cyprus", 2133, 72, 5, 1, 1, 2, 2),
 ('https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwyfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Filios Sazeides', 'white bedspread inside room', "Cyprus", 2133, 72, 5, 1, 1, 2, 2),
 ('https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwzfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Andrea Davis', 'Living room interior design', "Portland, Maine", 1112, 312, 6, 4, 2, 9, 4);
 
+=======
+VALUES ('https://images.unsplash.com/photo-1601918774946-25832a4be0d6?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwxfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Karsten Winegeart', 'Coffee and A-Frames', "Austin Texas", 5555, 644, 4, 4, 2, 9, 1),
+('https://images.unsplash.com/photo-1553444836-bc6c8d340ba7?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwyfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Filios Sazeides', 'white bedspread inside room', "Cyprus", 2134, 72, 5, 1, 1, 2, 2),
+('https://images.unsplash.com/photo-1591825729269-caeb344f6df2?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwzfHxhaXJibmJ8ZW58MHx8fHwxNjk2MjEyNzA2fDA&ixlib=rb-4.0.3','Andrea Davis', 'Living room interior design', "Portland, Maine", 1112, 312, 6, 4, 2, 9, 4),
+('https://images.unsplash.com/photo-1595599512948-b9831e5fc11c?ixid=M3w1MTAyODF8MHwxfHNlYXJjaHwxM3x8YWlyYm5ifGVufDB8fHx8MTY5NjIxMjcwNnww&ixlib=rb-4.0.3', 'Sonnie Hiles', 'black platform bed with white mattress inside bedroom', "London", 121, 93, 6, 2, 5, 7, 9);
+>>>>>>> Stashed changes
 --
 -- Insert table values in `houamenityListse`
 --
@@ -169,6 +176,7 @@ VALUES (1, 2),
 (1, 3),
 (1, 5),
 (1, 1),
+<<<<<<< Updated upstream
 (1, 6);
 
 INSERT IGNORE INTO amenityList (house_id, amenity_id)
@@ -177,3 +185,20 @@ VALUES (2, 1),
 (2, 4),
 (2, 6),
 (2, 9);
+=======
+(1, 6),
+(2, 1),
+(2, 3),
+(2, 4),
+(2, 6),
+(3, 9),
+(3, 1),
+(3, 6),
+(3, 2),
+(3, 7),
+(4, 9),
+(4, 1),
+(4, 6),
+(4, 2),
+(4, 7);
+>>>>>>> Stashed changes

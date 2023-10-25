@@ -36,7 +36,14 @@ class HousepageController extends BaseController{
                 else if ($action == 'reserve') {
                     if(isset($_GET['dataId'])){
                         $id = $_GET['dataId'];
+<<<<<<< Updated upstream
                         $this->house->reserveHouse(isset($_GET['price']), $id, 1);
+=======
+                        if (isset($_GET['price'])){
+                            $price = $_GET['price'];
+                            $this->house->reserveHouse($price, $id, 1);
+                        }
+>>>>>>> Stashed changes
                     }
                 }
             }

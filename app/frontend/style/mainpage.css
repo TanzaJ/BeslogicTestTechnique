@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+*{
+    font-family: "geometric sans serif";
+}
+
+>>>>>>> Stashed changes
 #container {
     padding: 40px;
     display: flex; /* or inline-flex */

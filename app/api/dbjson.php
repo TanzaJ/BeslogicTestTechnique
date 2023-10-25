@@ -18,6 +18,13 @@ class DbJson extends BaseController{
             header("Content-Type: application/json");
             return json_encode($this->house->getAll());
         }
+<<<<<<< Updated upstream
+=======
+        else if ($dataNeeded == 'reservations') { 
+            header("Content-Type: application/json");
+            return json_encode($this->reservation->getAll());
+        }
+>>>>>>> Stashed changes
     }
     function getJsonWithId($dataNeeded, $id){
         if ($dataNeeded == 'house') { 
@@ -28,12 +35,17 @@ class DbJson extends BaseController{
             header("Content-Type: application/json");
             return json_encode($this->house->getAllHouseAmenities($id));
         }
+<<<<<<< Updated upstream
         else if ($dataNeeded == 'reservation') { 
             header("Content-Type: application/json");
             return json_encode($this->reservation->getAll($id));
         }
         else {
             return "goofyhaha";
+=======
+        else {
+            return "no data sent";
+>>>>>>> Stashed changes
         }
     }
 }
